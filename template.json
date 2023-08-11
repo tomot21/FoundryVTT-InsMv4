@@ -1,0 +1,144 @@
+{
+  "Actor": {
+    "types": ["angel", "npc"],
+    "templates": {
+      "base": {
+        "health": {
+          "value": 10,
+          "min": 0,
+          "max": 10
+        },
+        "power": {
+          "value": 5,
+          "min": 0,
+          "max": 5
+        },
+        "biography": ""
+      }
+    },
+    "character": {
+      "templates": ["base"],
+      "attributes": {
+        "level": {
+          "value": 1
+        }
+      },
+      "abilities": {
+        "str": {
+          "value": 10
+        },
+        "dex": {
+          "value": 10
+        },
+        "con": {
+          "value": 10
+        },
+        "int": {
+          "value": 10
+        },
+        "wis": {
+          "value": 10
+        },
+        "cha": {
+          "value": 10
+        }
+      }
+    },
+    "angel": {
+      "name": "",
+      "superior": "",
+      "rank": 0,
+      "rank-powers": "",
+      "characteristics": {
+        "strength": { "current": 0 },
+        "agility": { "current": 0 },
+        "perception": { "current": 0 },
+        "willpower": { "current": 0 },
+        "presence": { "current": 0 },
+        "faith": { "current": 0 }
+      },
+      "fp": {
+        "current": 0,
+        "max": 0
+      },
+      "pp": {
+        "current": 0,
+        "max": 0
+      },
+      "ap": {
+        "current": 0,
+        "start": 100
+      },
+      "injuries": {
+        "mi": {
+          "max": 6,
+          "open": 0,
+          "closed": 0
+        },
+        "si": {
+          "max": 5,
+          "open": 0,
+          "closed": 0
+        },
+        "fi": {
+          "max": 3,
+          "open": 0,
+          "closed": 0
+        },
+        "id": {
+          "max": 2,
+          "open": 0,
+          "closed": 0
+        }
+      },
+      "notes": {
+        "name1": "",
+        "note1": "",
+        "name2": "",
+        "note2": "",
+        "name3": "",
+        "note3": "",
+        "name4": "",
+        "note4": ""
+      },
+      "material advantages": {
+        "meeting places": "",
+        "hideouts": "",
+        "covers": "",
+        "resources": "",
+        "servants & troops": ""
+      }
+    },
+    "npc": {
+      "templates": ["base"],
+      "cr": 0
+    }
+  },
+  
+  "Item": {
+    "types": ["item", "primarytalent", "secondarytalent", "exotictalent", "power"],
+    "templates": {
+      "base": {
+        "description": ""
+      }
+    },
+    "item": {
+      "templates": ["base"],
+      "quantity": 1,
+      "weight": 0,
+      "formula": "d20 + @str.mod + ceil(@lvl / 2)"
+    },
+    "primarytalent": {
+      "templates": ["base"]
+    },
+    "secondarytalent": {
+      "templates": ["base"]
+    },
+    "exotictalent": {
+      "templates": ["base"]
+    },
+    "power": {
+      "templates": ["base"]
+    }
+  }
+}

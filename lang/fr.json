@@ -1,0 +1,140 @@
+{
+
+  "TYPES": {
+    "Actor": {
+      "angel": "Ange",
+      "npc": "Personnage Non Joueur"
+    },
+    "Item": {
+      "move": "Action",
+      "weapon": "Arme",
+      "advantage": "Avantage",
+      "disadvantage": "Désavantage",
+      "darksecret": "Sombre Secret",
+      "relationship": "Relation",
+      "gear": "Ressort Dramatique"
+    }
+  },
+  
+  "InsMv4": {
+
+    "identity": "Identité",
+    "superior": "Supérieur",
+    "rank": "Grade",
+    "rank-powers": "Pouvoirs de Grade",
+
+    "tabs": {
+      "attributes": "Attributs",
+      "talents": "Talents",
+      "powers": "Pouvoirs",
+      "notes": "Notes"
+    },
+
+    "characteristics": {
+      "strength": {
+        "name": "Force",
+        "abbreviation": "For"
+      },
+      "agility": {
+        "name": "Agilité",
+        "abbreviation": "Agi"
+      },
+      "perception": {
+        "name": "Perception",
+        "abbreviation": "Per"
+      },
+      "willpower": {
+        "name": "Volonté",
+        "abbreviation": "Vol"
+      },
+      "presence": {
+        "name": "Présence",
+        "abbreviation": "Pré"
+      },
+      "faith": {
+        "name": "Foi",
+        "abbreviation": "Foi"
+      },
+      "luck": {
+        "name": "Chance",
+        "abbreviation": "Cha"
+      }
+    },
+
+    "fp": {
+      "name": "Points de Fatigue (PF)",
+      "current": "PF actuels",
+      "max": "PF max"
+    },
+
+    "pp": {
+      "name": "Points de Pouvoirs (PP)",
+      "current": "PP actuels",
+      "max": "PP max"
+    },
+
+    "ap": {
+      "name": "Points d'Administration (PA)",
+      "current": "PA actuels",
+      "start": "PA de départ"
+    },
+
+    "injuries": {
+      "mi": {
+        "name": "Blessures légères (BL)",
+        "open": "BL ouvertes",
+        "closed": "BL fermées",
+        "max": "BL max"
+      },
+      "si": {
+        "name": "Blessures graves (BG)",
+        "open": "BG ouvertes",
+        "closed": "BG fermées",
+        "max": "BG max"
+      },
+      "fi": {
+        "name": "Blessures fatales (BF)",
+        "open": "BF ouvertes",
+        "closed": "BF fermées",
+        "max": "BF max"
+      },
+      "id": {
+        "name": "Mort subite (MS)",
+        "open": "MS ouvertes",
+        "closed": "MS fermées",
+        "max": "MS max"
+      }
+    },
+
+    "interface": {
+      "add": {
+        "talent": {
+          "name": "Ajout Talent",
+          "label": "Ajouter un Talent"
+        },
+        "power": {
+          "name": "Ajout Pouvoir",
+          "label": "Ajouter un Pouvoir"
+        }
+      },
+      "edit": {
+        "talent": "Modifier le Talent",
+        "power": "Modifier le Pouvoir"
+      },
+      "delete": {
+        "talent": "Supprimer le Talent",
+        "power": "Supprimer le Pouvoir"
+      }
+    },
+
+    "talents": {
+      "primary": "Talents principaux",
+      "secondary": "Talents secondaires",
+      "exotic": "Talents exotiques"
+    },
+
+    "powers": "Pouvoirs"
+
+
+  }
+}

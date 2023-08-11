@@ -1,0 +1,107 @@
+{{log this}}
+<form class="{{cssClass}} {{actor.type}} flexcol" autocomplete="off">
+
+  {{!-- Sheet Header --}}
+  <header class="sheet-header">
+    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="161" width="100"/>
+    <div class="header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{actor.name}}"/></h1><label>{{localize "InsMv4.identity"}}</label>
+      <h4><input name="system.superior" type="text" value="{{system.superior}}"/></h4><label>{{localize 'InsMv4.superior'}}</label>
+      <h4><input name="system.rank" type="number" value="{{system.rank}}" min="0" max="3"/></h4><label>{{localize 'InsMv4.rank'}}</label>
+      <h4><input name="system.rank-powers" type="text" value="{{system.rank-powers}}"/></h4><label>{{localize 'InsMv4.rank-powers'}}</label>
+    </div>
+  </header>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    {{!-- Default tab is specified in actor-sheet.mjs --}}
+    <a class="item" data-tab="attributes">{{localize "InsMv4.tabs.attributes"}}</a>
+    <a class="item" data-tab="talents">{{localize "InsMv4.tabs.talents"}}</a>
+    <a class="item" data-tab="powers">{{localize "InsMv4.tabs.powers"}}</a>
+    <a class="item" data-tab="notes">{{localize "InsMv4.tabs.notes"}}</a>
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+
+    {{!-- Owned Attributes Tab --}}
+    <div class="tab attributes" data-group="primary" data-tab="attributes">
+      <section class="grid grid-6col">
+        {{#each system.characteristics as |characteristic key|}}
+          <div>
+            <div>{{localize (concat "InsMv4.characteristics." key ".name")}}</div>
+            <div>
+              <select class="hidden-select" name="system.characteristics.{{key}}.current" value="{{characteristic.current}}">
+                {{#select characteristic.current}}
+                  {{> "systems/insmv4/templates/actor/parts/characteristics-values.html"}}
+                {{/select}}
+              </select>
+            </div>
+          </div>
+        {{/each}}
+      </section>
+      <section class="grid grid-3col">
+        <div class="flex-group-left">{{localize "InsMv4.fp.name"}}&nbsp;:</div>
+        <div class="flex-group-left"><input name="system.fp.current" type="number" value="{{system.fp.current}}"/><label>{{localize "InsMv4.fp.current"}}</label></div>
+        <div class="flex-group-left"><input name="system.fp.max" type="number" value="{{system.fp.max}}"/><label>{{localize 'InsMv4.fp.max'}}</label></div>
+      </section>
+      <section class="grid grid-3col">
+        <div class="flex-group-left">{{localize "InsMv4.pp.name"}}&nbsp;:</div>
+        <div class="flex-group-left"><input name="system.pp.current" type="number" value="{{system.pp.current}}"/><label>{{localize "InsMv4.pp.current"}}</label></div>
+        <div class="flex-group-left"><input name="system.pp.max" type="number" value="{{system.pp.max}}"/><label>{{localize "InsMv4.pp.max"}}</label></div>
+      </section>
+      <section class="grid grid-3col">
+        <div class="flex-group-left">{{localize "InsMv4.ap.name"}}&nbsp;:</div>
+        <div class="flex-group-left"><input name="system.ap.current" type="number" value="{{system.ap.current}}"/><label>{{localize "InsMv4.ap.current"}}</label></div>
+        <div class="flex-group-left"><input name="system.ap.start" type="number" value="{{system.ap.start}}"/><label>{{localize "InsMv4.ap.start"}}</label></div>
+      </section>
+      <section class="grid grid-4col">
+        <div class="flex-group-left">{{localize "InsMv4.injuries.mi.name"}}&nbsp;:</div>
+        <div class="flex-group-left"><input name="system.injuries.mi.open" type="number" value="{{system.injuries.mi.open}}"/><label>{{localize "InsMv4.injuries.mi.open"}}</label></div>
+        <div class="flex-group-left"><input name="system.injuries.mi.closed" type="number" value="{{system.injuries.mi.closed}}"/><label>{{localize "InsMv4.injuries.mi.closed"}}</label></div>
+        <div class="flex-group-left"><input name="system.injuries.mi.max" type="number" value="{{system.injuries.mi.max}}"/><label>{{localize "InsMv4.injuries.mi.max"}}</label></div>
+      </section>
+      <section class="grid grid-4col">
+        <div class="flex-group-left">{{localize "InsMv4.injuries.si.name"}}&nbsp;:</div>
+        <div class="flex-group-left"><input name="system.injuries.si.open" type="number" value="{{system.injuries.si.open}}"/><label>{{localize "InsMv4.injuries.si.open"}}</label></div>
+        <div class="flex-group-left"><input name="system.injuries.si.closed" type="number" value="{{system.injuries.si.closed}}"/><label>{{localize "InsMv4.injuries.si.closed"}}</label></div>
+        <div class="flex-group-left"><input name="system.injuries.si.max" type="number" value="{{system.injuries.si.max}}"/><label>{{localize "InsMv4.injuries.si.max"}}</label></div>
+      </section>
+      <section class="grid grid-4col">
+        <div class="flex-group-left">{{localize "InsMv4.injuries.fi.name"}}&nbsp;:</div>
+        <div class="flex-group-left"><input name="system.injuries.fi.open" type="number" value="{{system.injuries.fi.open}}"/><label>{{localize "InsMv4.injuries.fi.open"}}</label></div>
+        <div class="flex-group-left"><input name="system.injuries.fi.closed" type="number" value="{{system.injuries.fi.closed}}"/><label>{{localize "InsMv4.injuries.fi.closed"}}</label></div>
+        <div class="flex-group-left"><input name="system.injuries.fi.max" type="number" value="{{system.injuries.fi.max}}"/><label>{{localize "InsMv4.injuries.fi.max"}}</label></div>
+      </section>
+      <section class="grid grid-4col">
+        <div class="flex-group-left">{{localize "InsMv4.injuries.id.name"}}&nbsp;:</div>
+        <div class="flex-group-left"><input name="system.injuries.id.open" type="number" value="{{system.injuries.id.open}}"/><label>{{localize "InsMv4.injuries.id.open"}}</label></div>
+        <div class="flex-group-left"><input name="system.injuries.id.closed" type="number" value="{{system.injuries.id.closed}}"/><label>{{localize "InsMv4.injuries.id.closed"}}</label></div>
+        <div class="flex-group-left"><input name="system.injuries.id.max" type="number" value="{{system.injuries.id.max}}"/><label>{{localize "InsMv4.injuries.id.max"}}</label></div>
+      </section>
+    </div>
+
+    {{!-- Owned Talents Tab --}}
+    <div class="tab talents" data-group="primary" data-tab="talents">
+      {{> "systems/InsMv4/templates/actor/parts/actor-talents.html"}}
+    </div>
+   
+    {{!-- Owned Powers Tab --}}
+    <div class="tab powers" data-group="primary" data-tab="powers">
+      {{> "systems/InsMv4/templates/actor/parts/actor-powers.html"}}
+    </div>
+
+    
+    {{!-- Notes Tab --}}
+    <div class="tab notes" data-group="primary" data-tab="notes">
+      <section class="grid grid-2col">
+        <div class="flex-group-left"><label><input name="system.notes.name1" type="text" value="{{system.notes.name1}}"/></label>{{editor system.notes.note1 target="system.notes.note1" rollData=rollData button=true owner=owner editable=editable}}</div>
+        <div class="flex-group-left"><label><input name="system.notes.name2" type="text" value="{{system.notes.name2}}"/></label>{{editor system.notes.note2 target="system.notes.note2" rollData=rollData button=true owner=owner editable=editable}}</div>
+        <div class="flex-group-left"><label><input name="system.notes.name3" type="text" value="{{system.notes.name3}}"/></label>{{editor system.notes.note3 target="system.notes.note3" rollData=rollData button=true owner=owner editable=editable}}</div>
+        <div class="flex-group-left"><label><input name="system.notes.name4" type="text" value="{{system.notes.name4}}"/></label>{{editor system.notes.note4 target="system.notes.note4" rollData=rollData button=true owner=owner editable=editable}}</div>
+      </section>
+    </div>
+
+  </section>
+</form>
+

@@ -1,0 +1,22 @@
+{
+  "InsMv4.AbilityStr": "Strength",
+  "InsMv4.AbilityCon": "Constitution",
+  "InsMv4.AbilityDex": "Dexterity",
+  "InsMv4.AbilityInt": "Intelligence",
+  "InsMv4.AbilityWis": "Wisdom",
+  "InsMv4.AbilityCha": "Charisma",
+
+  "InsMv4.AbilityStrAbbr": "str",
+  "InsMv4.AbilityConAbbr": "con",
+  "InsMv4.AbilityDexAbbr": "dex",
+  "InsMv4.AbilityIntAbbr": "int",
+  "InsMv4.AbilityWisAbbr": "wis",
+  "InsMv4.AbilityChaAbbr": "cha",
+
+  "InsMv4.EffectCreate": "Create Effect",
+  "InsMv4.EffectToggle": "Toggle Effect",
+  "InsMv4.EffectEdit": "Edit Effect",
+  "InsMv4.EffectDelete": "Delete Effect",
+
+  "InsMv4.Add": "Add"
+}

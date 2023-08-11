@@ -1,0 +1,40 @@
+{
+  "id": "InsMv4",
+  "title": "In Nomine Satanis / Magna Veritas · 4th Edition",
+  "description": "INS/MV is a very popular role-playing game set in an alternate universe where religion has a real influence. Players can be angels in the service of God or demons in the service of Satan. They are pawns in a gigantic chess game between God and Satan, called the Great Game. Characters must carry out their assigned missions while remaining discreet and respecting the demands of their superiors. The game is notable for its irreverent humour towards religion and its many tongue-in-cheek references. The rules use a 666-sided die to determine the success or failure of actions, and characters are defined by their traits, talents and powers.",
+  "version": "0.0.1",
+  "license": "LICENSE",
+  "changelog": "CHANGELOG.md",
+  "compatibility": {
+    "minimum": 11,
+    "verified": "11.307",
+    "maximum": 12
+  },
+  "authors": [
+    {
+      "name": "YanK",
+      "url": "https://fr.tipeee.com/yank",
+      "email": "yanklinnomme@gmail.com",
+      "discord": "yanklinnomme"
+    }
+  ],
+  "background": "systems/InsMv4/asset/background.svg",
+  "esmodules": ["module/InsMv4.mjs"],
+  "styles": ["css/InsMv4.css"],
+  "packs": [],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "fr",
+      "name": "Français",
+      "path": "lang/fr.json"
+    }
+  ],
+  "url": "",
+  "manifest": "",
+  "download": ""
+}
